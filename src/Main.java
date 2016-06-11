@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -23,6 +24,8 @@ public class Main extends Application{
     TextField userTextField = new TextField();
     Label pw = new Label("Password: ");
     PasswordField pwBox = new PasswordField();
+    Button signin = new Button("Sign in");
+    HBox hbBtn = new HBox(10);
 
     @Override
     public void start(Stage primaryStage)
@@ -46,6 +49,11 @@ public class Main extends Application{
         grid.add(userTextField, 1, 1);
         grid.add(pw, 0, 2);
         grid.add(pwBox, 1, 2);
+
+        hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
+        hbBtn.getChildren().add(signin);
+
+        grid.add(hbBtn, 1, 4);
 
 
 
